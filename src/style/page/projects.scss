@@ -1,0 +1,172 @@
+.projects {
+  .cover {
+    height: 40rem;
+    background-image: url(../../image/ourprojects.jpg);
+    position: relative;
+    background-position: 10% 35%;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .overlay {
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      opacity: 0.4;
+    }
+    .content {
+      position: absolute;
+      width: 100%;
+      top: 21rem;
+      h2 {
+        color: #fff;
+        font-size: 3.5rem;
+        font-weight: 900;
+        line-height: 70px;
+        font-family: "Poppins", sans-serif;
+        margin-bottom: 50px;
+      }
+    }
+  }
+
+  .work_text {
+    margin-top: 9rem;
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+    align-items: center;
+    .content {
+      width: 100%;
+      text-align: center;
+      display: grid;
+      place-items: center;
+      h3 {
+        padding-top: 30px;
+        font-size: 40px;
+        color: #1f1f1f;
+        font-weight: bold;
+      }
+      p {
+        margin-top: 30px;
+        color: #727272;
+        width: 38rem;
+      }
+    }
+
+    .projectsData {
+      text-align: center;
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .work_row {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 6.25rem;
+    .project{
+      width: 350px;
+      margin-left: 10px;
+      margin-top: 6.25rem;
+    img {
+      width: 350px;
+    }
+    .text {
+      text-align: center;
+      font-family: "Poppins", sans-serif;
+      margin-top: 3rem;
+      h3 {
+        font-size: 24px;
+        color: #1f1f1f;
+        letter-spacing: 3px;
+      }
+      p {
+        font-size: 15px;
+        color: rgba(54, 54, 54, 0.5);
+        letter-spacing: 1px;
+      }
+    }
+    }
+
+    .info {
+      font-family: "Poppins", sans-serif;
+      margin-top: 1rem;
+      text-align: center;
+      a {
+        display: flex;
+        justify-content: center;
+        &:hover span {
+          padding: 0 40px 0 0;
+          transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+        }
+        span {
+          font-size: 15px;
+          color: #3a908a;
+        }
+        .icon {
+          font-size: 25px;
+          margin-left: 20px;
+          color: #3a908a;
+        }
+      }
+    }
+  
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .projects {
+    .cover {
+      height: 28rem;
+      background-position: 60% !important;
+      .content {
+        top: 16rem;
+        h2 {
+          font-size: 2.5rem;
+          line-height: 50px;
+        }
+      }
+    }
+    .work_text {
+      margin-top: 6rem;
+      p { width: 100% !important; }
+    }
+    .work_row {
+      flex-wrap: wrap;
+      .project { margin: 15px; }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .projects {
+    .cover {
+      height: 22rem;
+      .content {
+        top: 12rem;
+        h2 {
+          font-size: 2rem;
+          line-height: 40px;
+        }
+      }
+    }
+    .work_text { margin-top: 4rem; }
+    .work_row .project { margin: 10px; }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .projects {
+    .cover {
+      height: 18rem;
+      .content {
+        top: 10rem;
+        h2 {
+          font-size: 1.5rem;
+          line-height: 32px;
+        }
+      }
+    }
+    .work_text { margin-top: 3rem; }
+    .work_row .project { margin: 8px; }
+  }
+}

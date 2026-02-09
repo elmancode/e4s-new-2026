@@ -1,0 +1,203 @@
+.contact {
+  position: relative; /* Add this line */
+  .cover {
+    height: 30rem;
+    background-image: url(../../image/contact_us.jpg);
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .overlay {
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      opacity: 0.6;
+    }
+    .content {
+      position: absolute;
+      width: 100%;
+      top: 18rem;
+      h2 {
+        color: #fff;
+        font-size: 3.5rem;
+        font-weight: 900;
+        line-height: 70px;
+        font-family: "Poppins", sans-serif;
+        margin-bottom: 50px;
+      }
+    }
+  }
+
+  .contactInfo {
+    font-family: "Poppins", sans-serif;
+    margin-top: 9rem;
+    display: grid;
+    place-items: center;
+
+    .map {
+      width: 100%;
+      iframe {
+        border-radius: 20px;
+        box-shadow: 0 10px 20px 0 rgba(99, 99, 99, 0.35);
+      }
+    }
+    .adress {
+      width: 100%;
+      .adress_i {
+        display: flex;
+        justify-content: space-around;
+        background-color: #3a908a;
+        margin-top: 50px;
+        border-radius: 50px;
+        height: 70px;
+
+        .contact_icon {
+          display: flex;
+          align-items: center;
+          margin: 20px;
+          color: #fff;
+          .icon {
+            font-size: 25px;
+          }
+          p {
+            font-size: 15px;
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+  .get_in_touch {
+    margin-top: 9rem;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    .content {
+      display: grid;
+      place-items: center;
+      h3 {
+        font-size: 40px;
+        color: #1f1f1f;
+        line-height: 52px;
+        font-weight: 400;
+      }
+      p {
+        margin-top: 30px;
+        max-width: 43.75rem;
+        width: 90%;
+        font-size: 14px;
+        color: #707070;
+      }
+    }
+
+    .form {
+      display: grid;
+      place-items: center;
+      form {
+        margin-top: 90px;
+        width: 90%;
+
+        .row1 {
+          display: flex;
+          justify-content: space-between;
+          gap: 20px;
+          input {
+            width: 100%;
+          }
+        }
+
+        input {
+          width: 100%;
+          border: 1px solid #c9c9c9;
+          height: 50px;
+          outline: none;
+          border-radius: 30px;
+          padding: 20px 16px;
+          margin-bottom: 25px;
+          font-size: 14px;
+          color: #000;
+          font-weight: 400;
+          font-family: "Poppins", sans-serif;
+        }
+
+        textarea {
+          height: 13rem;
+          width: 100%;
+          border: 1px solid #c9c9c9;
+          outline: none;
+          border-radius: 30px;
+          padding: 20px 16px;
+          margin-bottom: 25px;
+          font-size: 14px;
+          color: #000;
+          font-weight: 400;
+          font-family: "Poppins", sans-serif;
+        }
+
+        .boxed_btn {
+          background: #3a908a;
+          width: 100%;
+          color: #fff;
+          display: inline-block;
+          padding: 12px 33px;
+          font-size: 16px;
+          font-weight: 500;
+          border: 1px solid transparent;
+          border-radius: 30px;
+          text-align: center;
+          cursor: pointer;
+          font-family: "Poppins", sans-serif;
+          &:hover {
+            background-color: transparent;
+            transition: 1s;
+            border: 1px solid #3a908a;
+            color: #3a908a;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .contact {
+    .cover {
+      height: 22rem;
+      .content { 
+        top: 14rem;
+        h2 {
+          font-size: 2.5rem;
+          line-height: 50px;
+        }
+      }
+    }
+    .contactInfo {
+      margin-top: 6rem;
+      .adress .adress_i {
+        flex-wrap: wrap;
+        height: auto !important;
+      }
+      .map iframe { height: 20rem; }
+    }
+    .get_in_touch {
+      .content h3 { font-size: 28px; }
+      .form form { width: 90%; }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact .get_in_touch .content p {
+    width: 90% !important;
+    max-width: 100% !important;
+    padding: 0 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contact .get_in_touch .content p {
+    width: 95% !important;
+    padding: 0 10px;
+    font-size: 13px;
+  }
+}

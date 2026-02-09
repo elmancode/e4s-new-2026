@@ -1,0 +1,149 @@
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    transition: all 0.4s ease-in-out;
+
+    .logo {
+      width: 90px;
+      transition: all 0.4s ease-in-out;
+    }
+
+    .right_side {
+      display: flex;
+      align-items: center;
+
+      .nav_lan {
+        display: flex;
+        align-items: center;
+
+        .menu_mobile {
+          display: none;
+          background: transparent;
+          border: none;
+          color: white;
+          cursor: pointer;
+          z-index: 101; // Ensure it's above the mobile nav
+          .icon {
+            font-size: 30px;
+          }
+        }
+
+        nav {
+          ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            li {
+              margin: 0 20px;
+              a {
+                color: #fff;
+                text-decoration: none;
+                font-family: "Poppins", sans-serif;
+                font-size: 15px;
+                &:hover {
+                  color: #3a908a;
+                }
+              }
+            }
+          }
+        }
+
+        .language {
+          margin-left: 20px;
+          background: transparent;
+          border: none;
+          
+          select {
+            background: transparent;
+            border: 0;
+            outline: 0;
+            color: white;
+            font-family: "Poppins", sans-serif;
+            font-size: 15px;
+            padding: 5px;
+            cursor: pointer;
+
+            option {
+              color: black;
+            }
+          }
+        }
+      }
+
+      .nav_mobile {
+        position: fixed;
+        top: 0;
+        right: -300px; // Start off-screen
+        width: 280px;
+        height: 100vh;
+        background-color: #3a908a; // Changed to user-provided color
+        z-index: 100;
+        transition: right 0.5s ease;
+
+        &.open {
+          right: 0; // Slide in
+        }
+        
+        ul {
+          list-style: none;
+          padding: 120px 0;
+          text-align: center;
+          li {
+            margin: 30px 0;
+            a {
+              color: white;
+              text-decoration: none;
+              font-size: 20px; // Reduced font size
+              font-family: "Poppins", sans-serif;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// --- Responsive ---
+
+@media (max-width: 991px) {
+  header .header .right_side .nav_lan {
+    nav {
+      display: none;
+    }
+    .menu_mobile {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  header .header {
+    padding: 15px 20px;
+  }
+
+  header .header .logo {
+    width: 70px;
+  }
+
+  header .header .right_side .nav_lan .language {
+    margin-left: 10px;
+    select {
+      font-size: 14px;
+      padding: 4px;
+    }
+  }
+  .nav_mobile {
+    width: 100%;
+    right: -100%;
+  }
+}

@@ -1,0 +1,153 @@
+
+.about {
+  font-family: "Poppins", sans-serif;
+
+  .cover {
+    height: 52rem;
+    background-image: url(../../image/ourprojects.jpg);
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .overlay {
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      opacity: 0.3;
+    }
+
+    .content {
+      width: 100%;
+      position: absolute;
+      top: 28rem;
+
+      h2 {
+        color: #fff;
+        width: 80%;
+        font-size: 3.5rem;
+        font-weight: 900;
+        line-height: 70px;
+        font-family: "Poppins", sans-serif;
+        margin-bottom: 50px;
+      }
+    }
+
+    @media screen and (max-width: 1024px) {
+      height: 28rem;
+      .content {
+        top: 15rem;
+        h2 {
+          font-size: 2rem;
+          line-height: 42px;
+        }
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      height: 22rem;
+      .content {
+        top: 12rem;
+        h2 {
+          font-size: 1.6rem;
+          line-height: 36px;
+        }
+      }
+    }
+    
+    @media screen and (max-width: 480px) {
+      height: 18rem;
+      .content {
+        top: 10rem;
+        h2 {
+          font-size: 1.3rem;
+          line-height: 30px;
+        }
+      }
+    }
+  }
+
+  .our_mission,
+  .our_vision,
+  .core_values {
+    margin-top: 9rem;
+    font-family: "Poppins", sans-serif;
+
+    .content {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    h3 {
+      width: 30%;
+      font-size: 26px;
+      color: #3a908a;
+      font-weight: 400;
+    }
+
+    .text {
+      width: 70%;
+      p {
+        margin-bottom: 15px;
+        color: #707070;
+        font-size: 16px;
+        i {
+          color: #0e0e0e;
+        }
+      }
+    }
+    
+    @media screen and (max-width: 1024px) {
+      .content {
+        flex-direction: column;
+        gap: 2rem;
+        h3, .text {
+            width: 100%;
+        }
+      }
+    }
+    
+    @media screen and (max-width: 768px) {
+        margin-top: 4rem;
+        h3 { font-size: 22px; }
+        .text p { font-size: 15px; }
+    }
+    
+    @media screen and (max-width: 480px) {
+        margin-top: 3rem;
+        h3 { font-size: 20px; }
+        .text p { font-size: 14px; }
+    }
+  }
+
+  .our_vision,
+  .core_values {
+    margin-top: 5rem;
+  }
+  
+  .core_values {
+      @media screen and (max-width: 768px) {
+          margin-top: 4rem;
+      }
+      @media screen and (max-width: 480px) {
+          margin-top: 3rem;
+      }
+  }
+
+  .about_text {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    margin-top: 3rem;
+    p {
+      font-family: "Poppins", sans-serif;
+      width: 62rem;
+    }
+    
+    @media screen and (max-width: 1024px) {
+        p {
+            width: 100%
+        }
+    }
+  }
+}

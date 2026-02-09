@@ -1,0 +1,160 @@
+
+.mics{
+    .cover {
+        height: 20rem;
+        background-color: #3a908a;
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    
+        .overlay {
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.6);
+          opacity: 0.4;
+        }
+        .content {
+          position: absolute;
+          width: 100%;
+          top: 13rem;
+          h2 {
+            color: #fff;
+            font-size: 3.5rem;
+            font-weight: 900;
+            line-height: 70px;
+            font-family: "Poppins", sans-serif;
+            margin-bottom: 50px;
+          }
+        }
+      }
+
+      .text{
+        margin-top: 8rem;
+        font-family: "Poppins", sans-serif;
+        h3 {
+            font-size: 40px;
+            color: #1f1f1f;
+            font-weight: bold;
+          }
+          p{
+            margin-top: 20px;
+            color: #727272;
+          }
+
+          ul {
+            li {
+                font-size: 16px;
+              color: rgba(0, 0, 0, 0.5);
+              margin: 20px 0px;
+              position: relative;
+              padding: 0 0 0 40px;
+            
+            }
+      
+            li::after {
+              position: absolute;
+                top: 4px;
+                left: 0px;
+                width: 15px;
+                height: 15px;
+                background: #3a908a;
+                border-radius: 100%;
+                display: block;
+                content: '';
+              }
+          }
+
+      }
+
+      .partners{
+        margin-top: 5rem;
+        img{
+            margin-top: 2rem;
+            height: 30px;
+            margin-right: 40px;
+        }
+      }
+}
+
+// Tablet (768px - 1024px)
+@media screen and (max-width: 1024px) {
+  .mics {
+    .cover {
+      height: 18rem;
+      .content {
+        top: 10rem;
+        h2 {
+          font-size: 2.5rem;
+          line-height: 50px;
+        }
+      }
+    }
+    .text {
+      margin-top: 5rem;
+      h3 { font-size: 32px; }
+      p, ul li { font-size: 15px; }
+    }
+    .partners img {
+      margin-right: 25px;
+      height: 28px;
+    }
+  }
+}
+
+// Mobile landscape / small tablet (480px - 768px)
+@media screen and (max-width: 768px) {
+  .mics {
+    .cover {
+      height: 15rem;
+      .content {
+        top: 8rem;
+        h2 {
+          font-size: 2rem;
+          line-height: 40px;
+        }
+      }
+    }
+    .text {
+      margin-top: 4rem;
+      h3 { font-size: 26px; }
+      p, ul li { font-size: 15px; }
+      ul li { padding: 0 0 0 30px; }
+    }
+    .partners {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      img {
+        margin-right: 15px;
+        height: 24px;
+      }
+    }
+  }
+}
+
+// Phone (up to 480px)
+@media screen and (max-width: 480px) {
+  .mics {
+    .cover {
+      height: 12rem;
+      .content {
+        top: 6rem;
+        h2 {
+          font-size: 1.5rem;
+          line-height: 32px;
+        }
+      }
+    }
+    .text {
+      margin-top: 3rem;
+      h3 { font-size: 22px; }
+      p, ul li { font-size: 14px; }
+      ul li { padding: 0 0 0 28px; }
+    }
+    .partners img {
+      height: 20px;
+      margin-right: 10px;
+    }
+  }
+}
