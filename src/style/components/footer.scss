@@ -1,9 +1,5 @@
 footer {
   width: 100%;
-  /* position: absolute; */ /* This was causing the issue */
-  /* left: 0; */
-  /* right: 0; */
-  /* bottom: 0; */
   background-color: #1f1f1f;
   height: 400px;
   text-align: center;
@@ -63,8 +59,10 @@ footer {
           border: 1px solid #fff;
           font-size: 15px;
           border-radius: 100%;
-          padding: 11px;
           margin: 0 8px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           a {
             color: #fff;
           }
@@ -97,12 +95,13 @@ footer {
     height: auto;
     padding-bottom: 2rem;
     .footer_top {
-      display: block;
-      text-align: center;
+      flex-direction: column;
       padding-top: 50px;
       padding-bottom: 50px;
       .logo_nav {
         display: block;
+        width: auto;
+        text-align: center;
         nav {
           margin-top: 20px;
           margin-left: 0;
@@ -114,8 +113,6 @@ footer {
       }
       .social_bar {
         margin-top: 25px;
-        padding: 0 40px;
-        justify-content: center;
       }
     }
     .footer_bottom {
@@ -163,11 +160,10 @@ footer {
         }
       }
       .social_bar {
-        padding: 0 20px;
         ul li {
           width: 32px;
           height: 32px;
-          margin: 0 8px 0 0;
+          margin: 0 4px;
         }
       }
     }

@@ -29,15 +29,13 @@
   }
 
   .work_text {
-    margin-top: 9rem;
+    margin-top: 5rem;
     font-family: "Poppins", sans-serif;
-    width: 100%;
-    align-items: center;
+    text-align: center;
     .content {
-      width: 100%;
-      text-align: center;
-      display: grid;
-      place-items: center;
+      max-width: 45rem;
+      margin: 0 auto;
+      padding: 0 15px;
       h3 {
         padding-top: 30px;
         font-size: 40px;
@@ -47,110 +45,138 @@
       p {
         margin-top: 30px;
         color: #727272;
-        width: 38rem;
       }
-    }
-
-    .projectsData {
-      text-align: center;
-      margin-top: 20px;
-      display: flex;
-      justify-content: space-between;
     }
   }
 
   .work_row {
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 6.25rem;
-    .project{
-      width: 350px;
-      margin-left: 10px;
-      margin-top: 6.25rem;
-    img {
-      width: 350px;
-    }
-    .text {
-      text-align: center;
-      font-family: "Poppins", sans-serif;
-      margin-top: 3rem;
-      h3 {
-        font-size: 24px;
-        color: #1f1f1f;
-        letter-spacing: 3px;
-      }
-      p {
-        font-size: 15px;
-        color: rgba(54, 54, 54, 0.5);
-        letter-spacing: 1px;
-      }
-    }
-    }
+    max-width: 1200px;
+    margin: 6.25rem auto 0 auto;
+    padding: 0 15px;
 
-    .info {
-      font-family: "Poppins", sans-serif;
-      margin-top: 1rem;
-      text-align: center;
-      a {
-        display: flex;
-        justify-content: center;
-        &:hover span {
-          padding: 0 40px 0 0;
-          transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+    .project {
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+
+      .mySwiper {
+        width: 100%;
+        aspect-ratio: 4 / 3; // Enforce a consistent aspect ratio
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.2);
+        margin-bottom: 2rem; // Adjusted margin
+      }
+
+      .swiper-slide {
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
         }
-        span {
+      }
+
+      --swiper-navigation-color: #3a908a;
+      --swiper-pagination-color: #3a908a;
+
+      .text {
+        text-align: center;
+        font-family: "Poppins", sans-serif;
+        margin-top: auto; // Push text to the bottom if heights differ
+        h3 {
+          font-size: 24px;
+          color: #1f1f1f;
+          letter-spacing: 3px;
+          margin-bottom: 0.5rem;
+        }
+        p {
           font-size: 15px;
-          color: #3a908a;
+          color: rgba(54, 54, 54, 0.7);
+          letter-spacing: 1px;
         }
-        .icon {
-          font-size: 25px;
-          margin-left: 20px;
-          color: #3a908a;
+      }
+      
+      .info {
+        font-family: "Poppins", sans-serif;
+        margin-top: 1.5rem;
+        text-align: center;
+        a {
+          display: inline-flex; 
+          align-items: center;
+          justify-content: center;
+          span {
+            font-size: 15px;
+            color: #3a908a;
+            transition: all 0.3s ease;
+          }
+          .icon {
+            font-size: 25px;
+            margin-left: 15px;
+            color: #3a908a;
+            transition: transform 0.3s ease;
+          }
+          &:hover {
+            .icon {
+              transform: translateX(5px);
+            }
+          }
         }
       }
     }
-  
   }
 }
+
+// RESPONSIVE STYLES
+
+// Tablet and small desktop
+@media screen and (min-width: 768px) {
+  .projects .work_row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+// Large desktop
+@media screen and (min-width: 1024px) {
+  .projects .work_row {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+}
+
 
 @media screen and (max-width: 1024px) {
   .projects {
     .cover {
       height: 28rem;
-      background-position: 60% !important;
+      background-position: center !important;
       .content {
         top: 16rem;
-        h2 {
-          font-size: 2.5rem;
-          line-height: 50px;
-        }
+        h2 { font-size: 2.5rem; line-height: 50px; }
       }
     }
-    .work_text {
-      margin-top: 6rem;
-      p { width: 100% !important; }
-    }
-    .work_row {
-      flex-wrap: wrap;
-      .project { margin: 15px; }
-    }
+    .work_text { margin-top: 6rem; }
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) { // Changed to 767 to avoid conflict
   .projects {
     .cover {
       height: 22rem;
       .content {
         top: 12rem;
-        h2 {
-          font-size: 2rem;
-          line-height: 40px;
-        }
+        h2 { font-size: 2rem; line-height: 40px; }
       }
     }
-    .work_text { margin-top: 4rem; }
-    .work_row .project { margin: 10px; }
+    .work_row .project { 
+        margin-bottom: 4rem; // Add space between stacked projects
+    }
+    .work_text { 
+        margin-top: 4rem; 
+        .content p { padding: 0 15px;}
+    }
   }
 }
 
@@ -160,13 +186,13 @@
       height: 18rem;
       .content {
         top: 10rem;
-        h2 {
-          font-size: 1.5rem;
-          line-height: 32px;
-        }
+        h2 { font-size: 1.8rem; line-height: 32px; }
       }
     }
     .work_text { margin-top: 3rem; }
-    .work_row .project { margin: 8px; }
+    .work_row .project .text {
+        h3 { font-size: 20px; }
+        p { font-size: 14px; }
+    }
   }
 }

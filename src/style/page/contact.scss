@@ -1,5 +1,5 @@
 .contact {
-  position: relative; /* Add this line */
+  position: relative; 
   .cover {
     height: 30rem;
     background-image: url(../../image/contact_us.jpg);
@@ -61,6 +61,7 @@
             font-size: 25px;
           }
           p {
+            color: #fff;
             font-size: 15px;
             margin-left: 10px;
           }
@@ -69,7 +70,7 @@
     }
   }
   .get_in_touch {
-    margin-top: 9rem;
+    margin-top: 5rem;
     text-align: center;
     font-family: "Poppins", sans-serif;
     .content {
@@ -174,8 +175,22 @@
     .contactInfo {
       margin-top: 6rem;
       .adress .adress_i {
-        flex-wrap: wrap;
-        height: auto !important;
+        background-color: transparent;
+        display: block;
+        border-radius: 0;
+        height: auto;
+        
+        .contact_icon {
+            background-color: #3a908a;
+            border-radius: 30px;
+            padding: 15px 20px;
+            margin: 0 0 15px 0;
+            justify-content: center;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
       }
       .map iframe { height: 20rem; }
     }
@@ -191,6 +206,10 @@
     width: 90% !important;
     max-width: 100% !important;
     padding: 0 15px;
+  }
+  .contact .contactInfo .adress .adress_i .contact_icon p {
+      font-size: 14px;
+      word-break: break-all;
   }
 }
 
