@@ -70,7 +70,7 @@ const Home = () => {
           scrollbar={{ draggable: true }}
           className="mySwiper"
         >
-          <SwiperSlide className="slideitmes">
+          <SwiperSlide className="slideItems">
             <img src={Cover1} alt="coverphoto" />
             <div className="overlay"> </div>
             <div className="content" data-aos="fade-right">
@@ -88,7 +88,7 @@ const Home = () => {
               </div>
             </div>
           </SwiperSlide>
-          <SwiperSlide className="slideitmes">
+          <SwiperSlide className="slideItems">
             <img src={Cover2} alt="coverphoto" className="cover2" />
             <div className="overlay"></div>
             <div className="content" data-aos="fade-right">
@@ -106,7 +106,7 @@ const Home = () => {
               </div>
             </div>
           </SwiperSlide>
-          <SwiperSlide className="slideitmes">
+          <SwiperSlide className="slideItems">
             <img src={Cover3} alt="coverphoto" />
             <div className="overlay"></div>
             <div className="content" data-aos="fade-right">

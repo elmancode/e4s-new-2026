@@ -82,7 +82,8 @@
       }
       p {
         margin-top: 30px;
-        width: 43.75rem;
+        max-width: 43.75rem;
+        width: 90%;
         font-size: 14px;
         color: #707070;
       }
@@ -93,13 +94,14 @@
       place-items: center;
       form {
         margin-top: 90px;
-        width: 70%;
+        width: 90%;
 
         .row1 {
           display: flex;
           justify-content: space-between;
+          gap: 20px;
           input {
-            width: 45%;
+            width: 100%;
           }
         }
 
@@ -158,11 +160,15 @@
 
 @media screen and (max-width: 1024px) {
   .contact {
-    width: 100%;
     .cover {
-      width: 100%;
       height: 22rem;
-      .content { top: 14rem; }
+      .content { 
+        top: 14rem;
+        h2 {
+          font-size: 2.5rem;
+          line-height: 50px;
+        }
+      }
     }
     .contactInfo {
       margin-top: 6rem;
@@ -172,41 +178,25 @@
       }
       .map iframe { height: 20rem; }
     }
-    .get_in_touch .content h3 { font-size: 28px; }
+    .get_in_touch {
+      .content h3 { font-size: 28px; }
+      .form form { width: 90%; }
+    }
   }
 }
 
 @media screen and (max-width: 768px) {
-  .contact {
-    .cover {
-      height: 18rem;
-      .content { top: 11rem; }
-    }
-    .contactInfo {
-      margin-top: 4rem;
-      .map iframe { height: 16rem; }
-    }
-    .get_in_touch {
-      margin-top: 3rem;
-      .content h3 { font-size: 24px; }
-    }
+  .contact .get_in_touch .content p {
+    width: 90% !important;
+    max-width: 100% !important;
+    padding: 0 15px;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .contact {
-    .cover {
-      height: 15rem;
-      .content { top: 9rem; }
-    }
-    .contactInfo {
-      margin-top: 3rem;
-      .map iframe { height: 14rem; }
-    }
-    .get_in_touch {
-      margin-top: 2rem;
-      .content h3 { font-size: 22px; }
-      .form form .row1 input { width: 100%; }
-    }
+  .contact .get_in_touch .content p {
+    width: 95% !important;
+    padding: 0 10px;
+    font-size: 13px;
   }
 }

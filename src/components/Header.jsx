@@ -83,19 +83,19 @@ const Header = () => {
           >
             <ul>
               <li>
-                <Link to="/"> Home</Link>
+                <Link to="/" onClick={() => setMenuOpen(false)}> Home</Link>
               </li>
               <li>
-                <Link to="/about"> About</Link>
+                <Link to="/about" onClick={() => setMenuOpen(false)}> About</Link>
               </li>
               <li>
-                <Link to="/services"> Services</Link>
+                <Link to="/services" onClick={() => setMenuOpen(false)}> Services</Link>
               </li>
               <li>
-                <Link to="/projects"> Projects</Link>
+                <Link to="/projects" onClick={() => setMenuOpen(false)}> Projects</Link>
               </li>
               <li>
-                <Link to="/contact"> Contact</Link>
+                <Link to="/contact" onClick={() => setMenuOpen(false)}> Contact</Link>
               </li>
             </ul>
           </div>

@@ -1,3 +1,5 @@
+@import '../base/variables';
+
 header {
     position: fixed;
     z-index: 2;
@@ -26,10 +28,12 @@ header {
             border: none;
             outline: none;
             cursor: pointer;
-            color: #fff;
+            color: $white;
             align-items: center;
             text-align: center;
             display: none;
+            position: relative; 
+            z-index: 20;
             .icon {
               font-size: 25px;
             }
@@ -44,11 +48,11 @@ header {
               li {
                 margin: 0 40px;
                 a {
-                  color: #fff;
+                  color: $white;
                   font-size: 15px;
-                  font-family: "Poppins", sans-serif;
+                  font-family: $font-main;
                   &:hover {
-                    color: #3a908a;
+                    color: $primary-color;
                   }
                 }
               }
@@ -63,9 +67,9 @@ header {
               border: none;
               background: none;
               outline: none;
-              color: #fff;
+              color: $white;
               font-size: 15px;
-              font-family: "Poppins", sans-serif;
+              font-family: $font-main;
             }
           }
         }
@@ -73,30 +77,35 @@ header {
       }
   
   
-        .nav_mobile {
-          position: fixed;
-          top: 5rem;
-          right: 0;
-          margin-top: 0;
-          background-color: #3a908a;
-          width: 12em;
-          min-height: 20em;
-          text-align: end;
-          border-top-left-radius: 20px;
-          border-bottom-left-radius: 20px;
-           ul {
-            padding-top: 3rem;
-             li {
-              padding: 10px 20px;
-               a {
-                 color: #fff;
-                 font-size: 16px;
-                 font-family: "Poppins", sans-serif;
-               }
+      .nav_mobile {
+        position: fixed;
+        top: 0;
+        right: 0;
+        margin-top: 0;
+        background-color: $primary-color;
+        width: 16em;
+        height: 100vh;
+        text-align: left;
+        padding-left: 20px;
+        padding-top: 100px;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        z-index: 10; 
+        
+         ul {
+           li {
+            padding: 0;
+             a {
+               display: block;
+               padding: 10px 0;
+               width: 100%;
+               cursor: pointer;
+               color: $white;
+               font-size: 16px;
+               font-family: $font-main;
              }
            }
          }
-      
+       }
     
     }
   }
@@ -124,21 +133,12 @@ header {
       }
   
       .nav_mobile {
-        top: 5rem;
-        right: 0;
-        margin-top: 0;
-        background-color: #3a908a;
-        width: 16em;
-        min-height: 28em;
-        text-align: end;
-        border-top-left-radius: 20px;
-        border-bottom-left-radius: 20px;
         ul {
           li {
             a {
-              color: #fff;
+              color: $white;
               font-size: 15px;
-              font-family: "Poppins", sans-serif;
+              font-family: $font-main;
             }
           }
         }
@@ -156,7 +156,6 @@ header {
     }
     .nav_mobile {
       width: 14em;
-      min-height: 24em;
       ul li a {
         font-size: 14px;
       }
@@ -174,13 +173,13 @@ header {
     }
     .nav_mobile {
       width: 12em;
-      min-height: 22em;
       ul {
-        padding-top: 2rem;
+        padding-top: 0;
       }
       ul li {
-        padding: 8px 16px;
+        padding: 0;
         a {
+          padding: 8px 0;
           font-size: 13px;
         }
       }
